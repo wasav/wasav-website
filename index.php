@@ -8,16 +8,18 @@ include_once './php-components/configuration.php';
 
 // Determine page
 $active = 'blog';
-if(isset($_GET['page'])){
+if (isset($_GET['page'])) {
 	$active = $_GET['page'];
 }
-if($active == 'blog'){
-	header("Location: ".SITE_WEB_ADDR."/".SITE_WP_FOLDER);
+if ($active === 'blog') {
+	header('Location: '.BLOG_WEB_ADDR.'/');
+	die;
 }
 
-if(!file_exists(SITE_ROOT_PATH.'/pages/'.$active.'.php')){
+if (!file_exists(SITE_ROOT_PATH.'/pages/'.$active.'.php')) {
 	$active = 'blog';
-	header("Location: ".SITE_WEB_ADDR."/".SITE_WP_FOLDER);
+	header('Location: '.SITE_WEB_ADDR.'/');
+	die;
 }
 
 include_once WP_THEME_PATH.'/header.php';
