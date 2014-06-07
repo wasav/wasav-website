@@ -7,7 +7,11 @@
 			
 ?>
 <div class="lab-area">
-	<?php require LABS_PATH."/".$labName."/".$cfg["excerpt"]; ?>
+	<a href="<?php echo SITE_WEB_ADDR."/?page=labs&l=".$labName; ?>"><h2><?php echo $labName; ?></h2></a>
+	<div class="lab-description">
+		<?php require LABS_PATH."/".$labName."/".$cfg["excerpt"]; ?>
+	</div>
+	
 </div>
 <?php
 		}
