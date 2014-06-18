@@ -37,7 +37,7 @@ include_once WP_THEME_PATH.'/header.php';
 
 ?>
 	<div class="container-fluid">
-		<div class="posts">
+		<div class="posts <?php if(!isset($GLOBALS['selectedLab']) && $active === 'labs'){ echo 'labs-list'; } ?>">
 			<?php
 			if( isset($GLOBALS['selectedLab'])){
 				include LABS_PATH."/".$GLOBALS['selectedLab']."/".$GLOBALS['labs'][$GLOBALS['selectedLab']]["index"];

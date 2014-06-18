@@ -1,0 +1,39 @@
+.labs-list{
+	width:100% !important;
+	max-width:70em !important;
+}
+
+.labs .lab-area{
+	padding-top: 120px;
+	overflow: hidden;
+	
+	margin-left: 1em;
+	text-align: justify;
+}
+
+.labs .lab-area .lab-area-img{
+	margin-top: -120px;
+	height:400px;
+}
+
+.labs .lab-area .lab-area-img.pull-right {
+	margin-left: 40px;
+}
+
+.labs .lab-area .lab-area-img.pull-left {
+	margin-right: 40px;
+}
+
+.labs .lab-area h2.align-left{
+	text-align: left;
+}
+
+.labs .lab-area h2.align-right{
+	text-align: right;
+}
+
+@media screen and (max-width: 650px){
+	.labs .lab-area .lab-area-img{
+		height:200px;
+	}
+}
