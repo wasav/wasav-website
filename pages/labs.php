@@ -20,7 +20,7 @@
 	}else{
 	
 ?>
-	<p>No experiments for now</p>
+		<p>Experiments are coming ...</p>
 <?php
 	}
 ?>

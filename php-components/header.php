@@ -5,7 +5,11 @@
 	}
 	
 	if(!isset($_GET['p'])){
-		$mode = "general-header";
+		if($active === 'labs' && isset($GLOBALS['selectedLab'])){
+			$mode = "labs";
+		}else{
+			$mode = "general-header";
+		}
 	}else{
 		$mode = "post-request";
 		
@@ -25,8 +29,16 @@
 			$author_id = intval($post->post_author);
 		}
 	}
+	
+	if($mode==='404'){ 
+		$additionnalClass = 'site-header-full';
+	}else if($mode === 'labs'){ 
+		$additionnalClass = 'site-header-labs';
+	}else{ 
+		$additionnalClass = '';
+	}
 ?>
-<header class="site-header <?php if($mode==='404'){ echo 'site-header-full';}?>">
+<header class="site-header <?php echo $additionnalClass; ?>">
 <?php 
 	if($mode === 'general-header'){
 		// not in wp particular post
@@ -52,8 +64,9 @@
 	<div class="title title-404">
 		<h1>Page Not Found</h1>
 	</div>
+<?php } else if($mode === 'labs'){ ?>
+	<div class="image-src main-image"></div>
 <?php } ?>
-
 <div class="menu">
 	<ul>
 		<li <?php if($active === 'blog'){ echo 'class="active"';}else{ echo 'class=""';} ?>><a href="<?php echo SITE_WEB_ADDR; ?>/index.php?page=blog"><i class="glyphicon glyphicon-home"></i></a> </li>

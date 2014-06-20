@@ -32,6 +32,10 @@
 	text-align: right;
 }
 
+body > div.lab-area{
+	padding-top:60px;
+}
+
 @media screen and (max-width: 650px){
 	.labs .lab-area .lab-area-img{
 		height:200px;

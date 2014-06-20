@@ -31,19 +31,30 @@ if (!file_exists(SITE_ROOT_PATH.'/pages/'.$active.'.php')) {
 
 include_once WP_THEME_PATH.'/header.php';
 
-?>
+	if( isset($GLOBALS['selectedLab'])){
+		
+	?>
+	
+	<div class="lab-area">
+	
+	<?php
+		include LABS_PATH."/".$GLOBALS['selectedLab']."/".$GLOBALS['labs'][$GLOBALS['selectedLab']]["index"];
+	?>
+	
+	</div>
+	
+	<?php
+	} else {
+ ?>
 	<div class="container-fluid">
 		<div class="posts <?php if(!isset($GLOBALS['selectedLab']) && $active === 'labs'){ echo 'labs-list'; } ?>">
 			<?php
-			if( isset($GLOBALS['selectedLab'])){
-				include LABS_PATH."/".$GLOBALS['selectedLab']."/".$GLOBALS['labs'][$GLOBALS['selectedLab']]["index"];
-			}else {
 				include SITE_ROOT_PATH.'/pages/'.$active.'.php';
-			}
 			?>
 		</div>
 	</div>
 <?php
+	}
 		// same footer too for both
 		include WP_THEME_PATH.'/footer.php';
 	?>
