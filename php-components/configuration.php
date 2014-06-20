@@ -1,5 +1,10 @@
 <?php
 		
+	// TODO: to be removed in prod
+	ini_set('display_errors', 'On');
+	error_reporting(E_ALL);
+
+		
 	define( 'SITE_WP_FOLDER', 'wp' );
 		
 	if(isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'localhost'){

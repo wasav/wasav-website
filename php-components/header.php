@@ -18,9 +18,11 @@
 		}
 		
 		$post = get_post( intval($_GET['p']) );
-		$author_id = intval($post->post_author);
+		
 		if($post === null){
 			$mode = "404";
+		}else{
+			$author_id = intval($post->post_author);
 		}
 	}
 ?>
@@ -47,7 +49,7 @@
 	
 <?php } else if($mode === '404'){ ?>
 	<div class="image-src main-image"></div>
-	<div class="title">
+	<div class="title title-404">
 		<h1>Page Not Found</h1>
 	</div>
 <?php } ?>

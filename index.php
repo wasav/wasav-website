@@ -1,9 +1,5 @@
 <?php
 
-// TODO: to be removed in prod
-ini_set('display_errors', 'On');
-error_reporting(E_ALL);
-
 include_once './php-components/configuration.php';
 require_once SITE_ROOT_PATH."/pages/labs-utils.php";
 
