@@ -12,6 +12,14 @@
 	text-align: justify;
 }
 
+.labs .lab-area .supported-browsers ul{
+	padding:0;
+}
+
+.labs .lab-area .supported-browsers li{
+	display:inline-block;
+}
+
 .labs .lab-area .lab-area-img{
 	margin-top: -120px;
 	height:400px;

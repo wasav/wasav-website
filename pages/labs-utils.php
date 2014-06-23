@@ -35,12 +35,20 @@ function getLabInstance($labName){
 	$folderDir = LABS_PATH."/".$labName;
 	if(file_exists($folderDir)){
 		
-		return array(
+		$result = array(
 			"css" => getLabCss($folderDir),
 			"js" => getLabJs($folderDir),
 			"index" => "index.php",
 			"excerpt" => "excerpt.php"
 		);
+		
+		require LABS_PATH."/".$labName."/config.php";
+		
+		$result["title"] = $GLOBALS[$labName]['title'];
+		$result["browsers"] = $GLOBALS[$labName]['browsers'];
+		unset($GLOBALS[$labName]);
+		
+		return $result;
 	}
 	
 	return false;
