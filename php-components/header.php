@@ -1,5 +1,9 @@
 <?php
 	
+	require_once SITE_ROOT_PATH."/pages/imgs-utils.php";
+	
+	$headerImg = SITE_WEB_ADDR.'/imgs/app-default-imgs/'.pickRandomImgs(SITE_ROOT_PATH.'/imgs/app-default-imgs');
+	
 	if(!isset($active)){
 		$active = 'blog';
 	}
@@ -18,7 +22,7 @@
 		if($imgId !== false && $imgId !== ''){
 			$large_image_url = wp_get_attachment_image_src($imgId )[0];	
 		}else{
-			$large_image_url = SITE_WEB_ADDR.'/imgs/shine.jpg';
+			$large_image_url = $headerImg;
 		}
 		
 		$post = get_post( intval($_GET['p']) );
@@ -44,9 +48,9 @@
 		// not in wp particular post
 		// personalize between main loop posts page, labs and contact
 ?>
-<div class="image-src main-image"></div>
+<div class="image-src" style="background-image:url('<?php echo $headerImg; ?>')"></div>
 <div class="title">
-		<h1 class="site-title">W</h1>
+	<h1 class="site-title">W</h1>
 </div>
 
 <?php } else if($mode === 'post-request'){
@@ -60,12 +64,12 @@
 	</div>
 	
 <?php } else if($mode === '404'){ ?>
-	<div class="image-src main-image"></div>
+	<div class="image-src" style="background-image:url('<?php echo $headerImg; ?>')"></div>
 	<div class="title title-404">
 		<h1>Page Not Found</h1>
 	</div>
 <?php } else if($mode === 'labs'){ ?>
-	<div class="image-src main-image"></div>
+	<div class="image-src" style="background-image:url('<?php echo $headerImg; ?>')"></div>
 	<div class="title">
 		<h1><?php echo $GLOBALS['labs'][$GLOBALS['selectedLab']]['title']; ?></h1>
 	</div>
