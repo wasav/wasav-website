@@ -33,7 +33,7 @@
 	if($mode==='404'){ 
 		$additionnalClass = 'site-header-full';
 	}else if($mode === 'labs'){ 
-		$additionnalClass = 'site-header-labs';
+		//$additionnalClass = 'site-header-labs';
 	}else{ 
 		$additionnalClass = '';
 	}
@@ -66,6 +66,9 @@
 	</div>
 <?php } else if($mode === 'labs'){ ?>
 	<div class="image-src main-image"></div>
+	<div class="title">
+		<h1><?php echo $GLOBALS['labs'][$GLOBALS['selectedLab']]['title']; ?></h1>
+	</div>
 <?php } ?>
 <div class="menu">
 	<ul>

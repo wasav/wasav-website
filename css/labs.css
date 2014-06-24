@@ -42,11 +42,17 @@
 }
 
 body > div.lab-area{
-	padding-top:60px;
+	padding-top:320px;
 }
 
 @media screen and (max-width: 650px){
 	.labs .lab-area .lab-area-img{
 		height:200px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	body > div.lab-area{
+		padding-top:270px;
 	}
 }
