@@ -42,5 +42,3 @@
 	define('SITE_NAME', 'Wasav');
 	define('SITE_HEADER_TITLE', 'W');
 	
-	
-	define('IMG_COPYRIGHT', 'Copyright ?');
