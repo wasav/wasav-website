@@ -36,8 +36,6 @@
 	
 	if($mode==='404'){ 
 		$additionnalClass = 'site-header-full';
-	}else if($mode === 'labs'){ 
-		//$additionnalClass = 'site-header-labs';
 	}else{ 
 		$additionnalClass = '';
 	}
@@ -48,14 +46,22 @@
 		// not in wp particular post
 		// personalize between main loop posts page, labs and contact
 ?>
-<div class="image-src" style="background-image:url('<?php echo $headerImg; ?>')"></div>
+<div class="image-src" style="background-image:url('<?php echo $headerImg; ?>')">
+	<div class="img-copyright">
+		<?php echo IMG_COPYRIGHT; ?>
+	</div>
+</div>
 <div class="title">
-	<h1 class="site-title">W</h1>
+	<h1 class="site-title"><?php echo SITE_HEADER_TITLE; ?></h1>
 </div>
 
 <?php } else if($mode === 'post-request'){
 ?>
-	<div class="image-src" style="background-image:url('<?php echo $large_image_url; ?>')"></div>	
+	<div class="image-src" style="background-image:url('<?php echo $large_image_url; ?>')">
+		<div class="img-copyright">
+			<?php echo IMG_COPYRIGHT; ?>
+		</div>
+	</div>	
 	<div class="title">
 		<h1><?php the_title(); ?></h1>
 		<span>By 
@@ -64,12 +70,20 @@
 	</div>
 	
 <?php } else if($mode === '404'){ ?>
-	<div class="image-src" style="background-image:url('<?php echo $headerImg; ?>')"></div>
+	<div class="image-src" style="background-image:url('<?php echo $headerImg; ?>')">
+		<div class="img-copyright">
+			<?php echo IMG_COPYRIGHT; ?>
+		</div>
+	</div>
 	<div class="title title-404">
 		<h1>Page Not Found</h1>
 	</div>
 <?php } else if($mode === 'labs'){ ?>
-	<div class="image-src" style="background-image:url('<?php echo $headerImg; ?>')"></div>
+	<div class="image-src" style="background-image:url('<?php echo $headerImg; ?>')">
+		<div class="img-copyright">
+			<?php echo IMG_COPYRIGHT; ?>
+		</div>
+	</div>
 	<div class="title">
 		<h1><?php echo $GLOBALS['labs'][$GLOBALS['selectedLab']]['title']; ?></h1>
 	</div>
