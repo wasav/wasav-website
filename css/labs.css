@@ -12,6 +12,10 @@
 	text-align: justify;
 }
 
+.labs .lab-area .supported-browsers{
+	text-align: center;
+}
+
 .labs .lab-area .supported-browsers ul{
 	padding:0;
 }
@@ -44,6 +48,39 @@
 body > div.lab-area{
 	padding-top:320px;
 }
+
+.browser-icon{
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	height:50px;
+	width:50px;
+}
+
+.chrome-icon{
+	background-image: url('../imgs/browser-icons/chrome.png');
+}
+
+.ie-icon{
+	background-image: url('../imgs/browser-icons/ie.png');
+}
+
+.opera-icon{
+	background-image: url('../imgs/browser-icons/opera.png');
+}
+
+.safari-icon{
+	background-image: url('../imgs/browser-icons/safari.png');
+}
+
+.firefox-icon{
+	background-image: url('../imgs/browser-icons/firefox.png');
+}
+
+/* Media queries section */
 
 @media screen and (max-width: 650px){
 	.labs .lab-area .lab-area-img{

@@ -12,6 +12,6 @@ function pickRandomImgs($folder){
 			return substr($file, $ind+$len);
 		}
 	}
-		
+	
 	return "shine.jpg";
 }

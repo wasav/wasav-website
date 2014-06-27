@@ -15,9 +15,9 @@
 		<div class="supported-browsers">
 			<ul>
 			<?php
-				foreach($cfg["browsers"] as $name=>$version){
+				foreach($cfg["browsers"] as $name=>$versions){
 			?>
-				<li><?php echo $name ?></li>
+				<li><div class="browser-icon <?php echo $name; ?>-icon" title="<?php echo implode(',',$versions); ?>"></div></li>
 			<?php
 				}
 			?>
