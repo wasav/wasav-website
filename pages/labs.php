@@ -13,15 +13,39 @@
 			<?php require LABS_PATH."/".$labName."/".$cfg["excerpt"]; ?>
 		</p>
 		<div class="supported-browsers">
-			<ul>
-			<?php
-				foreach($cfg["browsers"] as $name=>$versions){
+			
+			<?php if(array_key_exists("browsers",$cfg)){ ?>
+			<div class="desktop-browsers">
+				<div class="platform-icon desktop-icon">
+				</div>
+				<ul>
+				<?php
+					foreach($cfg["browsers"] as $name=>$versions){
+				?>
+					<li><div class="browser-icon <?php echo $name; ?>-icon" title="<?php echo implode(',',$versions); ?>"></div></li>
+				<?php
+					}
+				?>
+				</ul>
+			</div>
+			<?php	}
+				if(array_key_exists("mobiles",$cfg)){
 			?>
-				<li><div class="browser-icon <?php echo $name; ?>-icon" title="<?php echo implode(',',$versions); ?>"></div></li>
-			<?php
-				}
-			?>
-			</ul>
+			<div class="mobile-browsers">
+				<div class="platform-icon mobile-devices-icon">
+				</div>
+				<ul>
+				<?php
+					foreach($cfg["mobiles"] as $name=>$versions){
+				?>
+					<li><div class="browser-icon <?php echo $name; ?>-icon" title="<?php echo implode(',',$versions); ?>"></div></li>
+				<?php
+					}
+				?>
+				</ul>
+			</div>
+			<?php } ?>
+			
 		</div>
 	</div>
 	<hr/>

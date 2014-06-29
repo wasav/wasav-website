@@ -12,12 +12,11 @@
 	text-align: justify;
 }
 
-.labs .lab-area .supported-browsers{
-	text-align: center;
-}
 
 .labs .lab-area .supported-browsers ul{
 	padding:0;
+	margin:0;
+	display:inline-block;
 }
 
 .labs .lab-area .supported-browsers li{
@@ -56,8 +55,27 @@ body > div.lab-area{
 	-o-background-size: cover;
 	background-size: cover;
 	
-	height:50px;
-	width:50px;
+	height:35px;
+	width:35px;
+}
+.platform-icon{
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display: inline-block;
+	
+	width: 30px;
+	height: 30px;
+	margin-right: 1em;
+}
+.desktop-icon{
+	background-image: url('../imgs/desktop-icon.png');
+}
+
+.mobile-devices-icon{
+	background-image: url('../imgs/mobile-devices-icon.png');
 }
 
 .chrome-icon{
@@ -85,6 +103,16 @@ body > div.lab-area{
 @media screen and (max-width: 650px){
 	.labs .lab-area .lab-area-img{
 		height:200px;
+	}
+	
+	.browser-icon{		
+		height:30px;
+		width:30px;
+	}
+	
+	.platform-icon{		
+		height:25px;
+		width:25px;
 	}
 }
 

@@ -17,31 +17,28 @@
     </div>
 
     <div>
-        <div>
-			<h2>Cartogram Demo</h2>
-			<div>
-				<form>
-					<fieldset>
-						<legend>Controls</legend>
-						<label class="control-label" for="field">Indicator</label>
-						<select id="field"></select>
-						<label class="control-label" for="year">Controls</label>
-						<a href="javascript:void(0)" onclick="play()">
-							<img id="imgPlay" src="<?php echo $path; ?>/cartogram/img/play.png" style="height:20px"/></a>
-						&nbsp;
-						<a href="javascript:void(0)" onclick="stop()">
-							<img id="imgPause" src="<?php echo $path; ?>/cartogram/img/pause_a.png" style="height:20px"/></a>
-						&nbsp;
-						<a href="javascript:void(0)" onclick="previous()">
-							<img src="<?php echo $path; ?>/cartogram/img/previous.png" style="height:20px"/></a>
-						<select style="font-weight: bold;" class="input-small" id="year"></select>
-						<a href="javascript:void(0)" onclick="next()">
-							<img src="<?php echo $path; ?>/cartogram/img/next.png" style="height:20px"/></a>
-						<em><span class="help-block" id="status"></span></em>
-					</fieldset>
-				</form>
-            </div>
-        </div>
+		<div>
+			<form>
+				<fieldset>
+					<legend>Controls</legend>
+					<label class="control-label" for="field">Indicator</label>
+					<select id="field"></select>
+					<label class="control-label" for="year">Controls</label>
+					<a href="javascript:void(0)" onclick="play()">
+						<img id="imgPlay" src="<?php echo $path; ?>/cartogram/img/play.png" style="height:20px"/></a>
+					&nbsp;
+					<a href="javascript:void(0)" onclick="stop()">
+						<img id="imgPause" src="<?php echo $path; ?>/cartogram/img/pause_a.png" style="height:20px"/></a>
+					&nbsp;
+					<a href="javascript:void(0)" onclick="previous()">
+						<img src="<?php echo $path; ?>/cartogram/img/previous.png" style="height:20px"/></a>
+					<select style="font-weight: bold;" class="input-small" id="year"></select>
+					<a href="javascript:void(0)" onclick="next()">
+						<img src="<?php echo $path; ?>/cartogram/img/next.png" style="height:20px"/></a>
+					<em><span class="help-block" id="status"></span></em>
+				</fieldset>
+			</form>
+		</div>
         <div>
 
             <div id="map-container">
