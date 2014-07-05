@@ -1,5 +1,4 @@
 <div class="contact">
-<div class="row">
 	<div class="author-featurette">
 		<h2>Anthony</h2>
 		<div class="author-description">
@@ -20,7 +19,7 @@
 		</div>
 	</div>
 
-	<div class="author-featurette">
+	<div class="author-featurette align-right">
 		<h2>Chris</h2>
 		<div class="author-description">
 			Software Engineer
@@ -36,7 +35,4 @@
 			</ul>
 		</div>
 	</div>
-</div>
-
-
 </div>

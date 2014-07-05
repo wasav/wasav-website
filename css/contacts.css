@@ -1,3 +1,7 @@
+.contact{
+	position:relative;
+}
+
 .contact .author-featurette .author-networks ul {
 	margin: 0;
 	padding: 0;
@@ -14,4 +18,9 @@
 
 .contact .align-left{
 	text-align:left;
+}
+
+.contact .author-featurette{
+	position:absolute;
+	width:100%;
 }
