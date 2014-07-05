@@ -8,7 +8,9 @@
 		$active = 'blog';
 	}
 	
-	if(!isset($_GET['p'])){
+	if(isset($GLOBALS['enforce404'])){
+		$mode = '404';
+	}else if(!isset($_GET['p'])){
 		if($active === 'labs' && isset($GLOBALS['selectedLab'])){
 			$mode = "labs";
 		}else{
