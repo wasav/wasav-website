@@ -1,0 +1,17 @@
+.contact .author-featurette .author-networks ul {
+	margin: 0;
+	padding: 0;
+	list-style:none;
+}
+
+.contact .author-featurette .author-networks ul li{
+	display:inline-block;
+}
+
+.contact .align-right{
+	text-align:right;
+}
+
+.contact .align-left{
+	text-align:left;
+}
