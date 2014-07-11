@@ -12,15 +12,14 @@
 	display:inline-block;
 }
 
-.contact .align-right{
-	text-align:right;
+.contact .author-featurette.align-right{
+	right:0;
 }
 
-.contact .align-left{
-	text-align:left;
+.contact .author-featurette.align-left{
+	left:0;
 }
 
 .contact .author-featurette{
 	position:absolute;
-	width:100%;
 }
