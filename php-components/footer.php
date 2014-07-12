@@ -1,10 +1,9 @@
 <footer>
 	<a name="about-anchor"></a>
 	<div class="content">
-		<div><h3>Touch W</h3></div>
 		<div class="authors">
 			<div>
-				<div>Anthony</div>
+				<div>Antho</div>
 				<div class="author-networks">
 					<ul>
 						<li>

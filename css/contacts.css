@@ -4,7 +4,7 @@ body > footer{
 	color:#5C5C5C;
 	height: 180px;
 	
-	margin-top: 30px;
+	margin-top: 150px;
 }
 
 body > footer .content{
@@ -17,33 +17,18 @@ body > footer .content{
 	padding-top: 30px;
 }
 
-body > footer .content > div:first-child{
-	margin-bottom: 18px;
-	float: left;
-}
-
-body > footer .authors{
-	display:table;
-	margin-left: auto;
-	margin-right: auto;
-	width:225px;
-}
-
 body > footer .authors  > div{
 	height: 40px;
-	display:table-row;
-}
-
-body > footer .authors > div > div:first-child{
-	font-size:14px;
+	width:170px;
+	display:inline-block;
 }
 
 body > footer .authors  > div > div{
-	display:table-cell;
+	display:inline-block;
 }
 
 body > footer .authors  > div > .author-networks img{
-	width:30px;
+	width:36px;
 }
 
 body > footer .authors  > div > .author-networks ul {
@@ -60,5 +45,13 @@ body > footer .authors  > div > .author-networks ul li{
 @media screen and (max-width: 600px){
 	body > footer .content{
 		width:90%;
+	}
+	
+	body > footer .authors  > div > .author-networks img{
+		width:25px;
+	}
+	
+	body > footer .authors  > div > div:first-child{
+		font-size:15px;
 	}
 }
