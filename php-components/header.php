@@ -43,6 +43,7 @@
 	}
 ?>
 <header class="site-header <?php echo $additionnalClass; ?>">
+<a name="header-anchor"></a>
 <?php 
 	if($mode === 'general-header'){
 		// not in wp particular post
@@ -60,7 +61,7 @@
 	</div>	
 	<div class="title">
 		<h1><?php the_title(); ?></h1>
-		<span>By 
+		<span class="post-metadata">
 		<?php the_author_meta('display_name',$author_id); ?> in <?php the_category(' '); ?>
 		</span>
 	</div>

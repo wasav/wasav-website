@@ -13,14 +13,18 @@ if ($active === 'blog') {
 	die;
 }else if($active === 'labs'){
 	$GLOBALS['labs'] = getLabInstances();
+	$classToApply = "labs-list";
 	if(isset($_GET['l'])){
 		$labName = $_GET['l'];
 		if(!isset($GLOBALS['labs'][$labName])){
 			unset($labName);
 		}else{
 			$GLOBALS['selectedLab'] = $labName;
+			$classToApply = "";
 		}
 	}
+}else if($active === 'contact'){
+	$classToApply = 'contact';
 }
 
 if (!file_exists(SITE_ROOT_PATH.'/pages/'.$active.'.php')) {
@@ -47,7 +51,7 @@ include_once WP_THEME_PATH.'/header.php';
 	} else {
  ?>
 	<div class="container-fluid">
-		<div class="posts <?php if(!isset($GLOBALS['selectedLab']) && $active === 'labs'){ echo 'labs-list'; } ?>">
+		<div class="<?php echo $classToApply; ?>">
 			<?php
 				include SITE_ROOT_PATH.'/pages/'.$active.'.php';
 			?>
