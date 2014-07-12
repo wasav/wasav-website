@@ -3,6 +3,7 @@
 <?php
 	if( isset($GLOBALS['labs'])){
 		$i=0;
+		$lastI = count($GLOBALS['labs']) - 1;
 		foreach($GLOBALS['labs'] as $labName=>$cfg){
 			
 ?>
@@ -48,7 +49,9 @@
 			
 		</div>
 	</div>
+	<?php if( $i < $lastI) { ?>
 	<hr/>
+	<?php } ?>
 <?php
 			$i++;
 		}
