@@ -46,7 +46,9 @@ include_once WP_THEME_PATH.'/header.php';
 	?>
 	
 	</div>
-	
+	<?php
+		include SITE_ROOT_PATH.'/php-components/sharing-buttons.php';
+	?>
 	<?php
 	} else {
  ?>
@@ -59,7 +61,7 @@ include_once WP_THEME_PATH.'/header.php';
 	</div>
 <?php
 	}
-		// same footer too for both
+	
 		include WP_THEME_PATH.'/footer.php';
 	?>
 	<!-- Not common js files from somewhere else -->

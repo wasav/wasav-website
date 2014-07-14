@@ -50,7 +50,7 @@
 }
 
 body > div.lab-area{
-	padding-top:320px;
+	padding-top:520px;
 }
 
 .browser-icon{
@@ -105,6 +105,12 @@ body > div.lab-area{
 
 /* Media queries section */
 
+@media screen and (max-width: 1200px){
+	body > div.lab-area{
+		padding-top:420px;
+	}
+}
+
 @media screen and (max-width: 650px){
 	.labs .lab-area .lab-area-img{
 		height:200px;
@@ -123,6 +129,6 @@ body > div.lab-area{
 
 @media screen and (max-width: 600px){
 	body > div.lab-area{
-		padding-top:270px;
+		padding-top:370px;
 	}
 }

@@ -14,7 +14,7 @@ body > footer .content{
 	margin-right:auto;
 	
 	text-align: center;
-	padding-top: 30px;
+	padding-top: 60px;
 }
 
 body > footer .authors  > div{
@@ -27,8 +27,12 @@ body > footer .authors  > div > div{
 	display:inline-block;
 }
 
+body > footer .authors  > div > div:first-child{
+	font-size:15px;
+}
+
 body > footer .authors  > div > .author-networks img{
-	width:36px;
+	width:25px;
 }
 
 body > footer .authors  > div > .author-networks ul {
@@ -45,13 +49,5 @@ body > footer .authors  > div > .author-networks ul li{
 @media screen and (max-width: 600px){
 	body > footer .content{
 		width:90%;
-	}
-	
-	body > footer .authors  > div > .author-networks img{
-		width:25px;
-	}
-	
-	body > footer .authors  > div > div:first-child{
-		font-size:15px;
 	}
 }
