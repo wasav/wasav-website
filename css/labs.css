@@ -1,3 +1,11 @@
+/********************************************************
+
+	General style for labs section: featurettes list and
+	base css rules for the lab view (when a user selects
+	a lab)
+
+********************************************************/
+
 .labs-list{
 	width:100% !important;
 	max-width: 50em !important;
@@ -5,17 +13,53 @@
 	margin-right: auto;
 }
 
+.lab-area{
+	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	color: rgba(0,0,0,0.6);
+	margin-bottom: 4px;
+	letter-spacing: -0.02em;
+	font-weight: 300;
+	font-style: normal;
+	
+	font-size:15px;
+}
+
+.labs .align-left{
+	text-align: left;
+}
+
+.labs .align-right{
+	text-align: right;
+}
+
+.labs .align-center{
+	text-align:center;
+}
+
+
 .labs .lab-area{
+	
 	padding-top: 120px;
 	overflow: hidden;
 	
 	margin-left: 1em;
 	margin-right: 1em;
+	
 	text-align: justify;
 }
 
 .labs .lab-area .lab-description{
 	font-size:15px;
+}
+
+.labs .lab-area  h3{
+	
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: -0.02em;
+	font-size: 25px;
+	line-height: 1.2;
+	margin-bottom: 2px;
 }
 
 .labs .lab-area .supported-browsers ul{
@@ -39,14 +83,6 @@
 
 .labs .lab-area .lab-area-img.pull-left {
 	margin-right: 40px;
-}
-
-.labs .lab-area h2.align-left{
-	text-align: left;
-}
-
-.labs .lab-area h2.align-right{
-	text-align: right;
 }
 
 body > div.lab-area{
@@ -130,5 +166,9 @@ body > div.lab-area{
 @media screen and (max-width: 600px){
 	body > div.lab-area{
 		padding-top:370px;
+	}
+	
+	.labs .lab-area  h3{
+		font-size: 20px;
 	}
 }
