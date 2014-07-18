@@ -45,10 +45,12 @@ include_once WP_THEME_PATH.'/header.php';
 		include LABS_PATH."/".$GLOBALS['selectedLab']."/".$GLOBALS['labs'][$GLOBALS['selectedLab']]["index"];
 	?>
 	
-	</div>
+	
 	<?php
 		include SITE_ROOT_PATH.'/php-components/sharing-buttons.php';
 	?>
+	</div>
+	
 	<?php
 	} else {
  ?>
