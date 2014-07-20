@@ -12,7 +12,7 @@
 		
 		define( 'WEB_SITE_FOLDER', 'wasav-website' );
 		define( 'SITE_WEB_ADDR', 'http://localhost/'.WEB_SITE_FOLDER);
-				
+		
 		require_once "mode.php";
 		
 		if(MODE == 'antho'){
