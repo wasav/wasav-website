@@ -25,7 +25,7 @@
 		
 	}else{
 		// Prod
-		define( 'WEB_SITE_FOLDER', '' );
+		define( 'WEB_SITE_FOLDER', '/dev' );
 		define( 'SITE_WEB_ADDR', 'http://wasav.fr' . WEB_SITE_FOLDER );
 		define( 'SITE_ROOT_PATH', '/home/wasav/www' . WEB_SITE_FOLDER );
 		define( 'MODE', 'prod' );
