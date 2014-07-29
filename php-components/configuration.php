@@ -10,7 +10,7 @@
 	if(isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'localhost'){
 		// Either at home or chris' home
 		
-		define( 'WEB_SITE_FOLDER', 'wasav-website' );
+		define( 'WEB_SITE_FOLDER', 'dev' );
 		define( 'SITE_WEB_ADDR', 'http://localhost/'.WEB_SITE_FOLDER);
 		
 		require_once "mode.php";
