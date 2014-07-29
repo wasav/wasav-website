@@ -43,6 +43,7 @@
 	}
 ?>
 <header class="site-header <?php echo $additionnalClass; ?>">
+<a name="header-anchor"></a>
 <?php 
 	if($mode === 'general-header'){
 		// not in wp particular post
@@ -50,7 +51,7 @@
 ?>
 <div class="image-src" style="background-image:url('<?php echo $headerImg; ?>')">
 </div>
-<div class="title">
+<div class="title main-title">
 	<h1 class="site-title"><?php echo SITE_HEADER_TITLE; ?></h1>
 </div>
 
@@ -60,7 +61,7 @@
 	</div>	
 	<div class="title">
 		<h1><?php the_title(); ?></h1>
-		<span>By 
+		<span class="post-metadata">
 		<?php the_author_meta('display_name',$author_id); ?> in <?php the_category(' '); ?>
 		</span>
 	</div>
@@ -82,7 +83,7 @@
 	<ul>
 		<li <?php if($active === 'blog'){ echo 'class="active"';}else{ echo 'class=""';} ?>><a href="<?php echo SITE_WEB_ADDR; ?>/index.php?page=blog"><i class="glyphicon glyphicon-home"></i></a> </li>
 		<li <?php if($active === 'labs'){ echo 'class="active"';}else{ echo 'class=""';} ?>><a href="<?php echo SITE_WEB_ADDR; ?>/index.php?page=labs"><i class="glyphicon glyphicon-fire"></i></a> </li>
-		<li <?php if($active === 'contact'){ echo 'class="active"';}else{ echo 'class=""';} ?>><a href="<?php echo SITE_WEB_ADDR; ?>/index.php?page=contact"><i class="glyphicon glyphicon-envelope"></i></a> </li>
+		<li><a href="#about-anchor"><i class="glyphicon glyphicon-envelope"></i></a></li>
 	</ul>
 </div>
 </header>

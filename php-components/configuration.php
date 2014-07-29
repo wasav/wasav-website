@@ -12,7 +12,7 @@
 		
 		define( 'WEB_SITE_FOLDER', 'wasav-website' );
 		define( 'SITE_WEB_ADDR', 'http://localhost/'.WEB_SITE_FOLDER);
-				
+		
 		require_once "mode.php";
 		
 		if(MODE == 'antho'){
@@ -28,6 +28,7 @@
 		define( 'WEB_SITE_FOLDER', '' );
 		define( 'SITE_WEB_ADDR', 'http://wasav.fr' . WEB_SITE_FOLDER );
 		define( 'SITE_ROOT_PATH', '/home/wasav/www' . WEB_SITE_FOLDER );
+		define( 'MODE', 'prod' );
 	}
 
 	define('BLOG_WEB_ADDR', SITE_WEB_ADDR.'/'.SITE_WP_FOLDER);

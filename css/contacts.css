@@ -1,25 +1,53 @@
-.contact{
-	position:relative;
+body > footer{
+	
+	background-color:#F3F3F3;
+	color:#5C5C5C;
+	height: 180px;
+	
+	margin-top: 150px;
 }
 
-.contact .author-featurette .author-networks ul {
+body > footer .content{
+	width:80%;
+	max-width:40em;
+	margin-left:auto;
+	margin-right:auto;
+	
+	text-align: center;
+	padding-top: 60px;
+}
+
+body > footer .authors  > div{
+	height: 40px;
+	width:170px;
+	display:inline-block;
+}
+
+body > footer .authors  > div > div{
+	display:inline-block;
+}
+
+body > footer .authors  > div > div:first-child{
+	font-size:15px;
+}
+
+body > footer .authors  > div > .author-networks img{
+	width:25px;
+}
+
+body > footer .authors  > div > .author-networks ul {
 	margin: 0;
 	padding: 0;
 	list-style:none;
 }
 
-.contact .author-featurette .author-networks ul li{
+body > footer .authors  > div > .author-networks ul li{
 	display:inline-block;
+	padding-left: 5px;
 }
 
-.contact .author-featurette.align-right{
-	right:0;
-}
-
-.contact .author-featurette.align-left{
-	left:0;
-}
-
-.contact .author-featurette{
-	position:absolute;
+@media screen and (max-width: 600px){
+	body > footer .content{
+		width:90%;
+	}
 }
