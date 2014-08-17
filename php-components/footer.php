@@ -33,6 +33,7 @@
 	
 	<?php 
 		if( MODE === 'prod' ){
+			if( !isset($_GET['preview'])) {
 	?>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -44,5 +45,7 @@
 	  ga('send', 'pageview');
 
 	</script>
-	<?php } ?>
+	<?php }
+		} 
+	?>
 </footer>

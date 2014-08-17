@@ -10,7 +10,7 @@
 	if(isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'localhost'){
 		// Either at home or chris' home
 		
-		define( 'WEB_SITE_FOLDER', 'wasav-website' );
+		define( 'WEB_SITE_FOLDER', 'dev' );
 		define( 'SITE_WEB_ADDR', 'http://localhost/'.WEB_SITE_FOLDER);
 		
 		require_once "mode.php";
@@ -25,9 +25,9 @@
 		
 	}else{
 		// Prod
-		define( 'WEB_SITE_FOLDER', '' );
-		define( 'SITE_WEB_ADDR', 'http://wasav.fr' . WEB_SITE_FOLDER );
-		define( 'SITE_ROOT_PATH', '/home/wasav/www' . WEB_SITE_FOLDER );
+		define( 'WEB_SITE_FOLDER', 'dev' );
+		define( 'SITE_WEB_ADDR', 'http://wasav.fr/' . WEB_SITE_FOLDER );
+		define( 'SITE_ROOT_PATH', '/home/wasav/www/' . WEB_SITE_FOLDER );
 		define( 'MODE', 'prod' );
 	}
 
