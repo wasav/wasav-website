@@ -61,9 +61,16 @@
 	</div>	
 	<div class="title">
 		<h1><?php the_title(); ?></h1>
-		<span class="post-metadata">
-		<?php the_author_meta('display_name',$author_id); ?> in <?php the_category(' '); ?>
-		</span>
+		<div class="post-meta">
+			<div>
+				<?php echo get_avatar( get_the_author_meta( 'ID', $author_id ), 32 ); ?>
+			</div>
+			<div>
+				<span><?php echo get_the_author_meta('display_name', $author_id); ?></span> in <?php the_category(' '); ?>
+				<span class="glyphicon glyphicon-time"></span>
+				<span><?php echo getContentAverageReadingTime(get_the_content()); ?></span>
+			</div>
+		</div>
 	</div>
 	
 <?php } else if($mode === '404'){ ?>
