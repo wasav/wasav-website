@@ -45,6 +45,10 @@ function getLabInstance($labName){
 		require LABS_PATH."/".$labName."/config.php";
 		
 		$result["title"] = $GLOBALS[$labName]['title'];
+		if(isset($GLOBALS[$labName]['blog-post-url'])){
+			$result["blog-post-url"] = $GLOBALS[$labName]['blog-post-url'];
+		}
+		
 		if(isset($GLOBALS[$labName]['browsers'])){
 			$result["browsers"] = $GLOBALS[$labName]['browsers'];
 		}

@@ -12,6 +12,15 @@
 		<a class="<?php echo $i % 2 === 0 ? 'align-left' : 'align-right'; ?>" href="<?php echo SITE_WEB_ADDR."/?page=labs&l=".$labName; ?>"><h3><?php echo $cfg['title']; ?></h3></a>
 		<p class="lab-description">
 			<?php require LABS_PATH."/".$labName."/".$cfg["excerpt"]; ?>
+			
+			<?php if(isset($cfg['blog-post-url'])){
+			?>
+			<p>
+			<a href="<?php echo $cfg['blog-post-url']; ?>" target="_blank">Find the blog post here</a>
+			</p>
+			<?php
+			}
+			?>
 		</p>
 		<div class="supported-browsers">
 			
@@ -48,6 +57,7 @@
 			<?php } ?>
 			
 		</div>
+		
 	</div>
 	<?php if( $i < $lastI) { ?>
 	<hr/>
