@@ -44,13 +44,10 @@ function getLabInstance($labName){
 		
 		require LABS_PATH."/".$labName."/config.php";
 		
-		$result["title"] = $GLOBALS[$labName]['title'];
-		if(isset($GLOBALS[$labName]['browsers'])){
-			$result["browsers"] = $GLOBALS[$labName]['browsers'];
+		foreach($GLOBALS[$labName] as $key => $val){
+			$result[$key] = $val;
 		}
-		if(isset($GLOBALS[$labName]['mobiles'])){
-			$result["mobiles"] = $GLOBALS[$labName]['mobiles'];
-		}
+		
 		unset($GLOBALS[$labName]);
 		
 		return $result;

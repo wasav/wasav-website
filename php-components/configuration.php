@@ -25,17 +25,17 @@
 		
 	}else{
 		// Prod
-		define( 'WEB_SITE_FOLDER', '' );
-		define( 'SITE_WEB_ADDR', 'http://wasav.fr' . WEB_SITE_FOLDER );
-		define( 'SITE_ROOT_PATH', '/home/wasav/www' . WEB_SITE_FOLDER );
+		define( 'WEB_SITE_FOLDER', 'dev' );
+		define( 'SITE_WEB_ADDR', 'http://wasav.fr/' . WEB_SITE_FOLDER );
+		define( 'SITE_ROOT_PATH', '/home/wasav/www/' . WEB_SITE_FOLDER );
 		define( 'MODE', 'prod' );
 	}
 
 	define('BLOG_WEB_ADDR', SITE_WEB_ADDR.'/'.SITE_WP_FOLDER);
 	define('BLOG_ROOT_PATH', SITE_ROOT_PATH.'/'.SITE_WP_FOLDER);
 
-	define('LABS_ADDR', SITE_WEB_ADDR. '/pages/labs');
-	define('LABS_PATH', SITE_ROOT_PATH. '/pages/labs');
+	define('LABS_ADDR', SITE_WEB_ADDR. '/pages/wasav-labs');
+	define('LABS_PATH', SITE_ROOT_PATH. '/pages/wasav-labs');
 
 	define('WP_THEME_ADDR', BLOG_WEB_ADDR. '/wp-content/themes/wasav-blog-theme');
 	define('WP_THEME_PATH', BLOG_ROOT_PATH. '/wp-content/themes/wasav-blog-theme');

@@ -51,6 +51,10 @@
 .labs .lab-area .lab-description{
 	font-size:15px;
 }
+.site-header .external-links a{
+	margin-left:1em;
+	margin-right:1em;
+}
 
 .labs .lab-area  h3{
 	

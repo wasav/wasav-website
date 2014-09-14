@@ -61,9 +61,16 @@
 	</div>	
 	<div class="title">
 		<h1><?php the_title(); ?></h1>
-		<span class="post-metadata">
-		<?php the_author_meta('display_name',$author_id); ?> in <?php the_category(' '); ?>
-		</span>
+		<div class="post-meta">
+			<div>
+				<?php echo get_avatar( get_the_author_meta( 'ID', $author_id ), 32 ); ?>
+			</div>
+			<div>
+				<span><?php echo get_the_author_meta('display_name', $author_id); ?></span> in <?php the_category(' '); ?>
+				<span class="glyphicon glyphicon-time"></span>
+				<span><?php echo getContentAverageReadingTime(get_the_content()); ?></span>
+			</div>
+		</div>
 	</div>
 	
 <?php } else if($mode === '404'){ ?>
@@ -77,6 +84,31 @@
 	</div>
 	<div class="title">
 		<h1><?php echo $GLOBALS['labs'][$GLOBALS['selectedLab']]['title']; ?></h1>
+		<?php 
+		$cfg = $GLOBALS['labs'][$GLOBALS['selectedLab']];
+		if(isset($cfg['blog-post-url']) || isset($cfg['repository-url'])) {
+		?>
+		<div class="external-links">
+		<?php if(isset($cfg['blog-post-url'])) {
+		?>
+		<a href="<?php echo $cfg['blog-post-url']; ?>" target="_blank">
+			<img title="Read Article Blog" src="<?php echo SITE_WEB_ADDR.'/imgs/networks/wordpress-icon-white.png'; ?>" width="36"/>
+		</a>
+		<?php
+		}	// End blog post url
+		?>
+		<?php if(isset($cfg['repository-url'])) {
+		?>
+		<a href="<?php echo $cfg['repository-url']; ?>" target="_blank">
+			<img title="See GitHub Repository" src="<?php echo SITE_WEB_ADDR.'/imgs/networks/github-icon-white.png'; ?>" width="36"/>
+		</a>
+		<?php
+		}	// End repository url
+		?>
+		</div>
+		<?php
+		}	// End if for blog post and url repository
+		?>
 	</div>
 <?php } ?>
 <div class="menu">

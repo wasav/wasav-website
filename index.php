@@ -9,7 +9,8 @@ if (isset($_GET['page'])) {
 	$active = $_GET['page'];
 }
 if ($active === 'blog') {
-	header('Location: '.BLOG_WEB_ADDR.'/');
+	$queryString = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING']: '';
+	header('Location: '.BLOG_WEB_ADDR.'/?'.$queryString);
 	die;
 }else if($active === 'labs'){
 	$GLOBALS['labs'] = getLabInstances();

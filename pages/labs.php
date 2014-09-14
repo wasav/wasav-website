@@ -10,9 +10,11 @@
 	<div class="lab-area">
 		<img class="lab-area-img <?php echo $i % 2 === 0 ? 'pull-right' : 'pull-left'; ?>" src="<?php echo LABS_ADDR.'/'.$labName.'/excerpt-img.png' ?>" />
 		<a class="<?php echo $i % 2 === 0 ? 'align-left' : 'align-right'; ?>" href="<?php echo SITE_WEB_ADDR."/?page=labs&l=".$labName; ?>"><h3><?php echo $cfg['title']; ?></h3></a>
+		
 		<p class="lab-description">
 			<?php require LABS_PATH."/".$labName."/".$cfg["excerpt"]; ?>
 		</p>
+		
 		<div class="supported-browsers">
 			
 			<?php if(array_key_exists("browsers",$cfg)){ ?>
@@ -48,6 +50,7 @@
 			<?php } ?>
 			
 		</div>
+		
 	</div>
 	<?php if( $i < $lastI) { ?>
 	<hr/>
