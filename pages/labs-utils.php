@@ -42,6 +42,10 @@ function getLabInstance($labName){
 			"excerpt" => "excerpt.php"
 		);
 		
+		if(!file_exists(LABS_PATH."/".$labName."/config.php")){
+			return $result;
+		}
+		
 		require LABS_PATH."/".$labName."/config.php";
 		
 		foreach($GLOBALS[$labName] as $key => $val){
@@ -57,7 +61,7 @@ function getLabInstance($labName){
 }
 
 function getLabInstances(){
-	$folders = glob(LABS_PATH."/*",GLOB_ONLYDIR);
+	$folders = glob(LABS_PATH."/*", GLOB_ONLYDIR);
 	$labs = array();
 	
 	foreach($folders as $n=>$folderDir){
@@ -66,6 +70,10 @@ function getLabInstances(){
 			continue;
 		}
 		$labName = substr($folderDir, $ind+1);
+		if(!file_exists(LABS_PATH.'/'.$labName.'/config.php')){
+			continue;
+		}
+			
 		$labs[$labName] = getLabInstance($labName);
 		
 	}
