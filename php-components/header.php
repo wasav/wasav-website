@@ -22,7 +22,7 @@
 		// a post is requested, display the thumbnail image
 		$imgId = get_post_thumbnail_id( intval($_GET['p']) );
 		if($imgId !== false && $imgId !== ''){
-			$large_image_url = wp_get_attachment_image_src($imgId )[0];	
+			$large_image_url = wp_get_attachment_image_src($imgId, "full" )[0];	
 		}else{
 			$large_image_url = $headerImg;
 		}
