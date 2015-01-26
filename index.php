@@ -67,16 +67,5 @@ include_once WP_THEME_PATH.'/header.php';
 	
 		include WP_THEME_PATH.'/footer.php';
 	?>
-	<!-- Not common js files from somewhere else -->
-	<?php 
-		if( isset($GLOBALS['selectedLab'])){
-			foreach($GLOBALS['labs'][$GLOBALS['selectedLab']]["js"] as $n=>$jsName){
-			
-	?>
-		<script type="text/javascript" src="<?php echo LABS_ADDR."/".$GLOBALS['selectedLab']."/js/".$jsName; ?>"></script>
-	<?php
-			}
-		}
-	?>
 </body>
 </html>

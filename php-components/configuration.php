@@ -43,3 +43,5 @@
 	define('SITE_NAME', 'Wasav');
 	define('SITE_HEADER_TITLE', 'W');
 	
+	
+	require "wp-mimicker.php";

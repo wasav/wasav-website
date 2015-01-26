@@ -33,7 +33,7 @@
 	
 	<?php 
 		if( MODE === 'prod' ){
-			if( !isset($_GET['preview'])) {
+			if( !function_exists('is_user_logged_in') || !is_user_logged_in()) {
 	?>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
