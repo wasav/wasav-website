@@ -40,6 +40,9 @@
 	define('WP_THEME_ADDR', BLOG_WEB_ADDR. '/wp-content/themes/wasav-blog-theme');
 	define('WP_THEME_PATH', BLOG_ROOT_PATH. '/wp-content/themes/wasav-blog-theme');
 	
+	define('IMG_ADDR', WP_THEME_ADDR.'/imgs');
+	define('IMG_PATH', WP_THEME_PATH.'/imgs');
+	
 	define('SITE_NAME', 'Wasav');
 	define('SITE_HEADER_TITLE', 'W');
 	

@@ -2,7 +2,7 @@
 	
 	require_once SITE_ROOT_PATH."/pages/imgs-utils.php";
 	
-	$headerImg = SITE_WEB_ADDR.'/imgs/app-default-imgs/'.pickRandomImgs(SITE_ROOT_PATH.'/imgs/app-default-imgs');
+	$headerImg = IMG_ADDR.'/app-default-imgs/'.pickRandomImgs(IMG_PATH.'/app-default-imgs');
 	
 	if(!isset($active)){
 		$active = 'blog';
@@ -92,7 +92,7 @@
 		<?php if(isset($cfg['blog-post-url'])) {
 		?>
 		<a href="<?php echo $cfg['blog-post-url']; ?>" target="_blank">
-			<img title="Read Article Blog" src="<?php echo SITE_WEB_ADDR.'/imgs/networks/wordpress-icon-white.png'; ?>" width="36"/>
+			<img title="Read Article Blog" src="<?php echo IMG_ADDR.'/networks/wordpress-icon-white.png'; ?>" width="36"/>
 		</a>
 		<?php
 		}	// End blog post url
@@ -100,7 +100,7 @@
 		<?php if(isset($cfg['repository-url'])) {
 		?>
 		<a href="<?php echo $cfg['repository-url']; ?>" target="_blank">
-			<img title="See GitHub Repository" src="<?php echo SITE_WEB_ADDR.'/imgs/networks/github-icon-white.png'; ?>" width="36"/>
+			<img title="See GitHub Repository" src="<?php echo IMG_ADDR.'/networks/github-icon-white.png'; ?>" width="36"/>
 		</a>
 		<?php
 		}	// End repository url
