@@ -5,22 +5,22 @@ module.exports = function(grunt) {
 	copy: {
 		'prod-site':{
 			files:{
-				'../wasav-website-<%= config.version %>/' : [ './pages/*.php',
+				'<%= config.paths.output_prod_path %>/<%= config.paths.prod_site_name %>/' : [ './pages/*.php',
 															 './php-components/*.php',
 															 './*.php']
 			}
 		},
 		'prod-blog-theme':{
 			expand: true,
-			cwd:'<%= config.blog_output %>/',
+			cwd:'<%= config.paths.blog_location %>/',
 			src: ['*.php',
 				 'fonts/**/*',
 				 'imgs/**/*',
 				 'favicon*.*',
 				 'style.css',
-				 'css/<%= config.cssPackedName %>',
-				 'js/<%= config.jsPackedName %>'],
-			dest:'../wasav-blog-theme-<%= config.version %>/'
+				 'css/<%= config.paths.cssPackedName %>',
+				 'js/<%= config.paths.jsPackedName %>'],
+			dest:'<%= config.paths.output_prod_path %>/<%= config.paths.prod_blog_name %>/'
 		}
 	},
 	uglify:{
@@ -30,41 +30,35 @@ module.exports = function(grunt) {
 		},
 		release:{
 			files:{
-				'<%= config.jsPacked %>' : '<%= config.jsFiles %>'
+				'<%= config.paths.jsPacked %>' : '<%= config.jsFiles %>'
 			}
 		}
 	},
 	cssmin:{
 		release:{
 			files:{
-				'<%= config.cssPacked %>' : '<%= config.cssFiles %>'
+				'<%= config.paths.cssPacked %>' : '<%= config.cssFiles %>'
 			}
 		}
 	},
 	config:{
 		// JS Files, in a specific order
 		jsFiles: [
-			'./blog/wp-content/themes/wasav-blog-theme/js/vendor/jquery-1.10.1.min.js',
-			'./blog/wp-content/themes/wasav-blog-theme/js/vendor/bootstrap.min.js'
+			'<%= config.paths.blog_location %>/js/vendor/jquery-1.10.1.min.js',
+			'<%= config.paths.blog_location %>/js/vendor/bootstrap.min.js'
 		],
 		
 		// CSS files
 		cssFiles: [
-			'<%= config.blog_output %>/css/bootstrap.min.css',
-			'<%= config.blog_output %>/css/bootstrap-theme.min.css',
-			'<%= config.blog_output %>/style.css',
-			'<%= config.blog_output %>/css/labs.css',
-			'<%= config.blog_output %>/css/contacts.css'
+			'<%= config.paths.blog_location %>/css/bootstrap.min.css',
+			'<%= config.paths.blog_location %>/css/bootstrap-theme.min.css',
+			'<%= config.paths.blog_location %>/style.css',
+			'<%= config.paths.blog_location %>/css/labs.css',
+			'<%= config.paths.blog_location %>/css/contacts.css'
 		],
 		
-		blog_output: './blog/wp-content/themes/wasav-blog-theme',
-		prod_output: 'wasav-prod-<%= config.version %>',
-		jsPackedName: 'packed-<%= config.version %>.min.js',
-		cssPackedName: 'style-<%= config.version %>.min.css',
-		jsPacked: '<%= config.blog_output %>/js/<%= config.jsPackedName %>',
-		cssPacked: '<%= config.blog_output %>/css/<%= config.cssPackedName %>',
-		
-		version: '1.1.0'
+		version: '1.1.0',
+		paths: grunt.file.readJSON('grunt-wasav-paths.json')
 	}
 	
   });

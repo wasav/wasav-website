@@ -1,0 +1,16 @@
+{
+	"output_prod_path": "..",
+	"blog_location": "./blog/wp-content/themes/wasav-blog-theme",
+	"site_location": ".",
+	
+	"site_name": "wasav-website",
+	"blog_name" : "wasav-blog-theme",
+	
+	"prod_site_name": "<%= config.paths.site_name %>-<%= config.version %>",
+	"prod_blog_name" : "<%= config.paths.blog_name %>-<%= config.version %>",
+	
+	"jsPackedName": "packed-<%= config.version %>.min.js",
+	"cssPackedName": "style-<%= config.version %>.min.css",
+	"jsPacked": "<%= config.paths.blog_location %>/js/<%= config.paths.jsPackedName %>",
+	"cssPacked": "<%= config.paths.blog_location %>/css/<%= config.paths.cssPackedName %>"
+}
