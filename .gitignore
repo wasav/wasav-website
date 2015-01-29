@@ -2,3 +2,4 @@ blog/**
 php-components/mode.php
 pages/wasav-labs
 node_modules
+./grunt-wasav-paths.json
