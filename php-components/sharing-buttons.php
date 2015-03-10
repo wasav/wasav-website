@@ -4,10 +4,10 @@
 <div>
 
 <?php 
-	$twitterHashtag = "wasav-blog";
+	$twitterHashtag = "WasavBlog";
 	if(isset($active)){
 		if($active === 'labs'){
-			$twitterHashtag = "wasav-labs";
+			$twitterHashtag = "WasavLabs";
 		}
 	}
 	
