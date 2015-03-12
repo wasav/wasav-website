@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 			'<%= config.paths.blog_location %>/css/contacts.css'
 		],
 		
-		version: '1.1.0',
+		version: '1.3.0',
 		paths: grunt.file.readJSON('grunt-wasav-paths.json')
 	}
 	

@@ -1,6 +1,6 @@
 <footer>
 	<a name="about-anchor"></a>
-	<div class="content">
+	<!-- <div class="content">
 		<div class="authors">
 			<div>
 				<div>Antho</div>
@@ -29,7 +29,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	
 	<?php 
 		if( MODE === 'prod' ){

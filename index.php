@@ -3,11 +3,19 @@
 include_once './php-components/configuration.php';
 require_once SITE_ROOT_PATH."/pages/labs-utils.php";
 
+$allPages = array('contact', 'blog', 'labs');
+
 // Determine page
 $active = 'blog';
 if (isset($_GET['page'])) {
+	if(!in_array($_GET['page'], $allPages)){
+		header('Location: '.BLOG_WEB_ADDR);
+		die;
+	}
+	
 	$active = $_GET['page'];
 }
+
 if ($active === 'blog') {
 	$queryString = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING']: '';
 	header('Location: '.BLOG_WEB_ADDR.'/?'.$queryString);
