@@ -37,7 +37,7 @@
 				<a href="http://fr.linkedin.com/pub/chris-mitel/23/774/69" target="_blank"><img src="<?php echo IMG_ADDR."/networks/linkedin_44x36.png"; ?>" alt="View Chris's LinkedIn profile" style="vertical-align:middle" border="0"></a>
 			</li>
 			<li>
-				<a href="https://plus.google.com/u/0/110874636852270077529/posts" target="_blank"><img src="<?php echo IMG_ADDR."/networks/google_36.png"; ?>" alt="View Chris's Twitter profile" style="vertical-align:middle" border="0"></a>
+				<a href="https://twitter.com/mitelchris"  target="_blank"><img src="<?php echo IMG_ADDR."/networks/twitter_36.png"; ?>" alt="View Chris's Twitter profile" style="vertical-align:middle" border="0"></a>
 			</li>
 		</ul>
 	</div>
