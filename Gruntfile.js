@@ -54,10 +54,11 @@ module.exports = function(grunt) {
 			'<%= config.paths.blog_location %>/css/bootstrap-theme.min.css',
 			'<%= config.paths.blog_location %>/style.css',
 			'<%= config.paths.blog_location %>/css/labs.css',
+			'<%= config.paths.blog_location %>/css/spritesheet.css',
 			'<%= config.paths.blog_location %>/css/contacts.css'
 		],
 		
-		version: '1.3.0',
+		version: '1.3.1',
 		paths: grunt.file.readJSON('grunt-wasav-paths.json')
 	}
 	

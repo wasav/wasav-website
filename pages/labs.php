@@ -24,13 +24,13 @@
 			
 			<?php if(array_key_exists("browsers",$cfg)){ ?>
 			<div class="desktop-browsers">
-				<div class="platform-icon desktop-icon">
+				<div class="platform-icon sprite sprite-desktop-icon-30x30">
 				</div>
 				<ul>
 				<?php
 					foreach($cfg["browsers"] as $name=>$versions){
 				?>
-					<li><div class="browser-icon <?php echo $name; ?>-icon" title="<?php echo implode(',',$versions); ?>"></div></li>
+					<li><div class="sprite sprite-<?php echo $name; ?>-35x35" title="<?php echo implode(',',$versions); ?>"></div></li>
 				<?php
 					}
 				?>
@@ -40,13 +40,13 @@
 				if(array_key_exists("mobiles",$cfg)){
 			?>
 			<div class="mobile-browsers">
-				<div class="platform-icon mobile-devices-icon">
+				<div class="platform-icon sprite sprite-mobile-devices-icon-30x30">
 				</div>
 				<ul>
 				<?php
 					foreach($cfg["mobiles"] as $name=>$versions){
 				?>
-					<li><div class="browser-icon <?php echo $name; ?>-icon" title="<?php echo implode(',',$versions); ?>"></div></li>
+					<li><div class="sprite sprite-<?php echo $name; ?>-35x35" title="<?php echo implode(',',$versions); ?>"></div></li>
 				<?php
 					}
 				?>

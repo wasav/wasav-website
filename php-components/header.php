@@ -92,7 +92,7 @@
 		<?php if(isset($cfg['blog-post-url'])) {
 		?>
 		<a href="<?php echo $cfg['blog-post-url']; ?>" target="_blank">
-			<img title="Read Article Blog" src="<?php echo IMG_ADDR.'/networks/wordpress-icon-white.png'; ?>" width="36"/>
+			<div title="Read Article Blog" class="sprite sprite-wordpress-icon-white-36x36"></div>
 		</a>
 		<?php
 		}	// End blog post url
@@ -100,7 +100,7 @@
 		<?php if(isset($cfg['repository-url'])) {
 		?>
 		<a href="<?php echo $cfg['repository-url']; ?>" target="_blank">
-			<img title="See GitHub Repository" src="<?php echo IMG_ADDR.'/networks/github-icon-white.png'; ?>" width="36"/>
+			<div title="See GitHub Repository" class="sprite sprite-github-icon-white-36x36"></div>
 		</a>
 		<?php
 		}	// End repository url
