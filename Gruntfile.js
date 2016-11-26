@@ -45,7 +45,8 @@ module.exports = function(grunt) {
 		// JS Files, in a specific order
 		jsFiles: [
 			'<%= config.paths.blog_location %>/js/vendor/jquery-1.10.1.min.js',
-			'<%= config.paths.blog_location %>/js/vendor/bootstrap.min.js'
+			'<%= config.paths.blog_location %>/js/vendor/bootstrap.min.js',
+			'<%= config.paths.blog_location %>/js/vendor/ajax-loader.js'
 		],
 		
 		// CSS files
@@ -58,7 +59,7 @@ module.exports = function(grunt) {
 			'<%= config.paths.blog_location %>/css/contacts.css'
 		],
 		
-		version: '1.3.1',
+		version: '1.3.7.2',
 		paths: grunt.file.readJSON('grunt-wasav-paths.json')
 	}
 	

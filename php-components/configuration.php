@@ -17,7 +17,7 @@
 		
 		if(MODE == 'antho'){
 			// antho's dev conf
-			define( 'SITE_ROOT_PATH', 'D:/Program Files/BitNami/wampstack-5.4.24-0/apache2/htdocs/' . WEB_SITE_FOLDER );
+			define( 'SITE_ROOT_PATH', 'D:/Program Files/BitNami/wampstack-5.6.25-0/apache2/htdocs/' . WEB_SITE_FOLDER );
 		}else{
 			// chris's dev conf
 			define( 'SITE_ROOT_PATH', '/var/www/html/' . WEB_SITE_FOLDER );
