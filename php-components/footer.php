@@ -1,5 +1,35 @@
 <footer>
 	
+	<div class="author-featurette pull-left">
+		<h3>Anthony</h3>
+		<div class="author-networks">
+			<ul>
+				<li>
+					<a href="http://fr.linkedin.com/pub/anthony-morel/26/8b3/368" target="_blank"><div class="sprite sprite-linkedin-36x36"></div></a>
+				</li>
+				<li>
+					<a href="https://twitter.com/Anthonyjlmorel"  target="_blank"><div class="sprite sprite-twitter-36x36"></div></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="author-featurette pull-right">
+		
+		<h3>Chris</h3>
+				
+		<div class="author-networks">
+			<ul>
+				<li>
+					<a href="http://fr.linkedin.com/pub/chris-mitel/23/774/69" target="_blank"><div class="sprite sprite-linkedin-36x36"></div></a>
+				</li>
+				<li>
+					<a href="https://twitter.com/mitelchris"  target="_blank"><div class="sprite sprite-twitter-36x36"></div></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
 	<?php 
 		if( MODE === 'prod' ){
 			if( !function_exists('is_user_logged_in') || !is_user_logged_in()) {
@@ -17,4 +47,7 @@
 	<?php }
 		} 
 	?>
+
+	
+
 </footer>
