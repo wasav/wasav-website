@@ -54,7 +54,7 @@
 <div class="image-src" style="background-image:url('<?php echo $headerImg; ?>')">
 </div>
 <div class="title main-title">
-	<h1 class="site-title"><?php echo SITE_HEADER_TITLE; ?></h1>
+	<a href="<?php echo SITE_WEB_ADDR ?>"><h1 class="site-title"><?php echo SITE_HEADER_TITLE; ?></h1></a>
 </div>
 
 </header>
